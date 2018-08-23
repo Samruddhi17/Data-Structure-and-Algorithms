@@ -5,7 +5,7 @@
 #         self.next = None
 
 class Solution(object):
-    def getIntersectionNode(self, headA, headB,count=0):
+    def getIntersectionNode(self, headA, headB):
         """
         :type head1, head1: ListNode
         :rtype: ListNode
