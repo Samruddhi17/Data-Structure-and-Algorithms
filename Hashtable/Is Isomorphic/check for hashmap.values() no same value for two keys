@@ -1,0 +1,23 @@
+class Solution(object):
+    def isIsomorphic(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if not s and not t:
+            return True
+        if not s or not t:
+            return False
+        
+        hashmap ={}
+        for i in range(len(s)):
+            if t[i] in hashmap.values() and s[i] not in hashmap:
+                return False
+            elif s[i] not in hashmap:
+                hashmap[s[i]]=t[i]
+            
+            if hashmap[s[i]]!=t[i]:
+                    return False  
+        return True
+        
